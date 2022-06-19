@@ -1,3 +1,4 @@
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const ref = {
   delay: document.querySelector('[name="delay"]'),
@@ -11,10 +12,6 @@ ref.button.addEventListener("click", create);
 let delay = null;
 let step = null;
 let position;
-
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
-
-
 
 function create(event) {
   event.preventDefault();
@@ -42,14 +39,13 @@ function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
     setTimeout(() => {
-     if (shouldResolve) {
+      if (shouldResolve) {
+      
     resolve({ position, delay });
   } else {
        reject({ position, delay });
   }
   }, delay);
-
-    
   })
  
  

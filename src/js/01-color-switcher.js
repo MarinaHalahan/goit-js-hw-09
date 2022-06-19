@@ -12,6 +12,7 @@ ref.stop.addEventListener("click", onStoptBtnClick);
 function onStartBtnClick() {
     ref.start.disabled = true;
     ref.stop.disabled = false;
+    changeBodyColor();
     timerId = setInterval(changeBodyColor, 1000);
 };
 
