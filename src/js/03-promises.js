@@ -17,6 +17,10 @@ function create(event) {
   event.preventDefault();
   delay = Number(ref.delay.value);
   step = Number(ref.step.value);
+  amount = Number(ref.amount.value);
+  if (delay || step || amount < 0) {
+    return;
+  }
   for (let i = 1; i <= ref.amount.value; i += 1){
     position = i;
     
