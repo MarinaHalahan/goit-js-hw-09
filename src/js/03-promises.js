@@ -19,6 +19,7 @@ function create(event) {
   step = Number(ref.step.value);
   amount = Number(ref.amount.value);
   if (delay || step || amount < 0) {
+    Notify.failure(`Введите плюсовые значения`)
     return;
   }
   for (let i = 1; i <= ref.amount.value; i += 1){
