@@ -11,6 +11,7 @@ ref.button.addEventListener("click", create);
 
 let delay = null;
 let step = null;
+let amount = null;
 let position;
 
 function create(event) {
